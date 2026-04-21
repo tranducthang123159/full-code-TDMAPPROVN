@@ -1,0 +1,69 @@
+/* ===== MAP FULL SCREEN ===== */
+#map {
+    height: 100vh;
+    width: 100%;
+}
+
+/* ===== NÚT MỞ CHỌN BẢN ĐỒ ===== */
+.layer-btn {
+    position: absolute;
+    left: 15px;
+    bottom: 20px;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+/* ===== POPUP CHỌN BẢN ĐỒ ===== */
+.map-switcher {
+    position: absolute;
+    right: 20px;
+    top: 80px;
+    width: 280px;
+    background: white;
+    border-radius: 14px;
+    padding: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.25);
+    z-index: 2000;
+    display: none;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Ô chọn */
+.map-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.map-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.map-item span {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+}
+
+.info-header{
+font-weight:600;
+padding:8px 0;
+cursor:pointer;
+}
+
+.info-content{
+max-height:0;
+overflow:hidden;
+transition:max-height 0.35s ease;
+}
+
+.info-section.active .info-content{
+max-height:500px;
+}
